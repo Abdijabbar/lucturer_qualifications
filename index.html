@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer Data Collection Form</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h2>Lecturer Data Collection Form</h2>
+    <form id="lecturerForm">
+        <label>Name: <input type="text" name="name" required></label><br><br>
+        <label>Email: <input type="email" name="email" required></label><br><br>
+        <label>Phone: <input type="tel" name="phone" required></label><br><br>
+
+        <div id="colleges">
+            <label>Colleges They Teach: <input type="text" name="colleges[]" required></label>
+            <button type="button" onclick="addCollege()">Add More</button>
+        </div><br>
+
+        <h3>Qualifications</h3>
+        <div id="qualifications">
+            <label>Bachelor - University: <input type="text" name="bachelor_university[]" required></label>
+            <label>City: <input type="text" name="bachelor_city[]" required></label>
+            <label>Country: <input type="text" name="bachelor_country[]" required></label>
+            <label>Upload Certificate: <input type="file" name="bachelor_certificate[]" required></label>
+            <button type="button" onclick="addBachelor()">Add More</button>
+        </div><br>
+
+        <h3>Courses They Teach</h3>
+        <div id="courses">
+            <label>Course: <input type="text" name="courses[]" required></label>
+            <button type="button" onclick="addCourse()">Add More</button>
+        </div><br>
+
+        <label>Upload CV: <input type="file" name="cv" required></label><br><br>
+        <label>Upload Passport-size Photo: <input type="file" name="photo" required></label><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="responseMessage"></p>
+</body>
+</html>
 
