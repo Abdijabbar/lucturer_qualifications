@@ -6,7 +6,7 @@ document.getElementById("lecturerForm").addEventListener("submit", async functio
 
     // Check for duplicate email
     const email = formData.get("email");
-    const checkResponse = await fetch(`https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec?email=${email}`);
+    const checkResponse = await fetch(`https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbwq2Ee_uJ62arO8au0WKKPuy2Tcm6Aa6HClMoqnUgt4sHN7w3_uyDwonhD4AFWkysRJ/exec/exec?email=${email}`);
     const checkData = await checkResponse.json();
 
     if (checkData.exists) {
@@ -15,7 +15,7 @@ document.getElementById("lecturerForm").addEventListener("submit", async functio
     }
 
     // Send data to Google Apps Script
-    const response = await fetch("https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwq2Ee_uJ62arO8au0WKKPuy2Tcm6Aa6HClMoqnUgt4sHN7w3_uyDwonhD4AFWkysRJ/exec", {
         method: "POST",
         body: formData
     });
